@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PacMan</title>
+    <link rel="icon" type="image/png" href="./src/images/pacman.png">
+    <link rel="stylesheet" href="./src/style.css">
+
+</head>
+
+<body>
+    <script src="./src/index.js" type="module"></script>
+    <div class="gameReloadScreen" id="gameOverScreen">
+        <h1 class="pacmanTitle">GAME OVER :(</h1>
+        <input type="button" value="RESTART" class="playAndRestartButton" onclick="{window.location.reload()}">
+    </div>
+    <div class="gameReloadScreen" id="gameWinScreen">
+        <h1 class="pacmanTitle">YOU WIN :)</h1>
+        <input type="button" value="RESTART" class="playAndRestartButton" onclick="{window.location.reload()}">
+    </div>
+    <div class="start">
+        <h1 class="pacmanTitle">PacMan</h1>
+        <input type="button" value="PLAY" id="play" class="playAndRestartButton" onclick="{
+        audio.play()
+        document.getElementsByClassName('start')[0].style.display = 'none';
+        }">
+        <audio id="audio" src="./src/sounds/pacman_beginning.wav"></audio>
+    </div>
+    <div class="game">
+        <div class="score">
+            <p>Score: <span id="scoreValue">0</span></p>
+            <div class="livesContainer">
+                <p>Lives:</p>
+                <div class="life" id="life1"></div>
+                <div class="life" id="life2"></div>
+                <div class="life" id="life3"></div>
+            </div>
+        </div>
+        <div id="container"></div>
+    </div>
+</body>
+
+</html>

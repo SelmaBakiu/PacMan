@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.pacmanTitle {
+  font-size: 100px;
+  font-weight: bold;
+  color: #d01313;
+  text-align: center;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.playAndRestartButton {
+  font-size: 50px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.playAndRestartButton:hover {
+  background-color: #000;
+  color: white;
+  transform: scale(1.05);
+}
+
+.playAndRestartButton:active {
+  transform: scale(0.98);
+}
+
+.game {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.start {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f00;
+}
+
+.gameReloadScreen {
+  z-index: 99;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f00;
+}
+
+#startbutton {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #fff;
+  border: 2px solid #f00;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.score {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.livesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+}
+
+.life {
+  width: 50px;
+  height: 50px;
+  background-image: url("../src/images/redHart.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 5px;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-color: #fff;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  background-color: #f00;
+  border-radius: 50%;
+  margin: 6px;
+}
+
+.cherry {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-image: url("../src/images/cherry.jpeg");
+  background-size: contain;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.wall {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-color: #000;
+}
+
+.pacman {
+  width: 20px;
+  height: 20px;
+  background-image: url("../src/images/pacman.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.ghost1 {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  background-image: url("../src/images/ghost1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0%;
+}
+
+.ghost2 {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  background-image: url("../src/images/ghost2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0%;
+}
+
+.ghost3 {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  background-image: url("../src/images/ghost3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0%;
+}
+.ghost4 {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  background-image: url("../src/images/ghost4.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0%;
+}
+
+.scaredghost {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  background-image: url("../src/images/scareghost.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0%;
+}
